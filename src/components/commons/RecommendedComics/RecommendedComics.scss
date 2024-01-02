@@ -1,0 +1,76 @@
+.recommended_story {
+    >.items-slide {
+        position: relative;
+        margin: 0 -7px;
+
+        .owl-theme .owl-nav [class*=owl-] {
+            position: absolute;
+            top: 50%;
+            margin-top: -45px;
+            width: 55px;
+            height: 55px;
+            text-align: center;
+            background: url('https://www.nettruyenbing.com/Data/Sites/1/skins/comic/images/next_prev.png') no-repeat -3px -33px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .owl-theme {
+            >.owl-nav {
+                >.owl-prev {
+                    left: 10px;
+                }
+            }
+        }
+
+        .owl-theme {
+            >.owl-nav {
+                >.owl-next {
+                    right: 10px;
+                    background-position: -63px -33px;
+                }
+            }
+        }
+
+        .item {
+            height: 218px;
+            position: relative;
+            text-align: center;
+            cursor: pointer;
+
+            >.slide-caption {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 52px;
+                line-height: 25px;
+                padding-left: 5px;
+                padding-right: 5px;
+                color: #fff;
+                background: url('https://www.nettruyenbing.com/Data/Sites/1/skins/comic/images/bg_over.png');
+
+                >h3 {
+                    margin: 4px 0px 1px 0px;
+                    font-weight: 400;
+                    font-size: 15px;
+                    height: 23px;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                }
+
+                >a {
+                    font-size: 13px;
+                    color: white;
+                }
+
+                >.time {
+                    font-size: 11px;
+                    font-style: italic;
+                    padding-left: 10px;
+                }
+            }
+        }
+    }
+}

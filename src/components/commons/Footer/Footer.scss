@@ -1,0 +1,41 @@
+@import '../../../assets/styles/_mixins.scss';
+
+footer {
+    background-color: black;
+    padding: 15px 0;
+
+    >.container {
+        @include atLgScreen {
+            width: 1036px;
+        }
+
+        @include atScreen576{
+            max-width: none;
+        }
+
+        >.row {
+            >.col-md-8 {
+                >ul {
+                    list-style-type: none;
+                    padding: 0;
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    >li {
+                        margin: 0;
+                        margin-right: 5px;
+                        line-height: 38px;
+
+                        >a {
+                            border: solid 1px #ddd;
+                            padding: 5px;
+                            white-space: nowrap;
+                            border-radius: 4px;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,282 @@
+@import '../../../assets/styles/_mixins.scss';
+
+.main_header {
+    height: 50px;
+    background: url('https://www.nettruyenbing.com/Data/Sites/1/skins/comic/images/bg_header_2017.jpg');
+
+    >.container {
+        @include atLgScreen {
+            width: 1036px;
+        }
+
+        @include atScreen576 {
+            // display: none;
+            max-width: none;
+            display: flex;
+            justify-content: space-between;
+
+            >.header_search {
+                >.search_box {
+                    display: none !important;
+                }
+
+                >.search_and_menu {
+                    display: block !important;
+                }
+            }
+        }
+
+        height: 100%;
+        display: flex;
+
+        >.logo {
+            height: 100%;
+            display: inline-block;
+            padding-right: 90px;
+
+            >img {
+                margin-top: 10px;
+            }
+        }
+
+        >.header_search {
+            height: 100%;
+
+            >.search_box {
+                display: flex;
+                margin-top: 8px;
+                background-color: white;
+
+                >input {
+                    padding: 6px 12px 6px 12px;
+                    width: 375px;
+                    border: none;
+                }
+
+                >.button_search:hover {
+                    background-color: #ccc;
+                }
+
+                >.button_search {
+                    display: inline-block;
+                    height: 36px;
+                    padding: 0px 10px 0px 10px;
+
+                    >i {
+                        padding-top: 10px;
+                    }
+                }
+
+                >input:focus {
+                    outline: none;
+                }
+            }
+
+            >.search_and_menu {
+                display: none;
+            }
+        }
+    }
+}
+
+.main_nav_header_bar {
+    height: 41px;
+    background-color: #e4e4e4;
+
+    @include atLgScreen {
+        font-size: 16px;
+    }
+
+    @include atScreen992 {
+        font-size: 12px;
+    }
+
+    @include atScreen768 {
+        font-size: 10px;
+    }
+
+    @include atScreen576 {
+        display: none;
+    }
+
+    >.container {
+        @include atLgScreen {
+            width: 1036px;
+        }
+
+        height: 100%;
+
+        >ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            height: 100%;
+            border-left: 1px solid #dddddd;
+
+            >li {
+                // border-left: 1px solid red;
+                border-right: 1px solid #dddddd;
+                height: 100%;
+                display: flex;
+                align-items: center;
+
+                >.nav_child {
+                    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                    list-style-type: none;
+                    padding: 0;
+                    margin: 0;
+                    position: absolute;
+                    top: 40px;
+                    z-index: 7;
+                    display: none;
+                    background-color: white;
+
+                    >li {
+                        // display: none;
+
+                        >div {
+                            display: flex;
+                            padding: 4px 0px 10px 0px;
+
+                            >div {
+                                padding: 0px 15px 0px 15px;
+
+                                >div {
+                                    >p {
+                                        margin: 0;
+                                        min-width: 132px;
+                                        padding: 0px 10px 0px 10px;
+                                        line-height: 32px;
+                                        cursor: pointer;
+
+                                        >strong {
+                                            color: red;
+                                        }
+                                    }
+
+                                    >p:hover {
+                                        color: #ae4ad9;
+
+                                        >strong {
+                                            color: red;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                >a {
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    padding: 0px 10px 0px 10px;
+                    color: black;
+                }
+            }
+
+            >li:hover {
+                background-color: white;
+
+                >a {
+                    color: #ae4ad9;
+                }
+            }
+        }
+    }
+}
+
+.nav_header_bar_collapse {
+    @include atScreen576 {
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+    }
+
+    position: fixed;
+    overflow-y: auto;
+    overflow-x: hidden;
+    top: 50px;
+    display: none;
+    background-color: #141414;
+    padding: 0 15px 0 15px;
+
+    >.search_box {
+        background-color: white;
+        margin-top: 8px;
+        display: flex;
+
+        >input {
+            padding: 6px 12px 6px 12px;
+            width: 100%;
+            border: none;
+        }
+
+        >.button_search:hover {
+            background-color: #ccc;
+        }
+
+        >.button_search {
+            display: inline-block;
+            height: 36px;
+            padding: 0px 10px 0px 10px;
+
+            >i {
+                padding-top: 10px;
+            }
+        }
+
+        >input:focus {
+            outline: none;
+        }
+    }
+
+    >.menu {
+        >ul {
+            list-style-type: none;
+            padding: 10px 0 10px 0;
+            margin: 0;
+
+            >li {
+                >a {
+                    text-decoration: none;
+                    color: white;
+                    text-transform: uppercase;
+                    line-height: 35px;
+                }
+
+                >ul {
+                    border-top: 1px solid white;
+                    list-style-type: none;
+                    padding: 0px 0px 10px 22px;
+                    display: none;
+
+                    >li {
+                        >div {
+                            display: flex;
+
+                            >div {
+                                >p {
+                                    color: aliceblue;
+                                    line-height: 32px;
+                                    width: 364px;
+                                    margin: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.active {
+    color: #d0b32e !important;
+    background-color: transparent !important;
+}
+
+.open {
+    display: block !important;
+}

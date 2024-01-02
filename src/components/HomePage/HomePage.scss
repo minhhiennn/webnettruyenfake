@@ -1,0 +1,94 @@
+@import '../../assets/styles/_mixins.scss';
+
+main {
+    background-color: #ebebeb;
+
+    >.container {
+        @include atLgScreen {
+            width: 1036px;
+        }
+
+        @include atScreen576 {
+            max-width: none;
+        }
+
+        background-color: white;
+        border: 1px solid #ddd;
+        padding: 15px;
+
+        .new_update_story {
+            >.items {
+                .image {
+                    height: 200px;
+                    overflow: hidden;
+                    position: relative;
+                    border-radius: 2px;
+
+                    >img {
+                        width: 100%;
+                    }
+
+                    >.item_caption {
+                        position: absolute;
+                        bottom: 0;
+                        background-color: rgba(0, 0, 0, 0.5);
+                        color: white;
+                        width: 100%;
+
+                        >span {
+                            font-size: 11px;
+                            padding-left: 4px;
+                        }
+                    }
+                }
+
+                figcaption {
+                    >h3 {
+                        margin: 0px 0px 7px;
+
+                        >a {
+                            font-size: 16px;
+                            color: black;
+                            // display: block;
+                            font-weight: 400;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 3;
+                            -webkit-box-orient: vertical;
+                        }
+                    }
+
+                    >ul {
+                        list-style-type: none;
+                        padding: 0;
+
+                        >li {
+                            >a {
+                                font-size: 13px;
+                                color: black;
+                            }
+
+                            >.time {
+                                font-size: 11px;
+                                float: right;
+                                margin-top: 4px;
+                                color: silver
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.page-title {
+    h2 {
+        margin: 0;
+        font-weight: 400;
+        font-size: 20px;
+        margin-bottom: 10px;
+        color: #2980b9;
+    }
+}

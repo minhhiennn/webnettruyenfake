@@ -1,0 +1,33 @@
+.detailsListChapter {
+    border: solid 1px #ddd;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+
+    >ul {
+        list-style-type: none;
+        padding: 0;
+        // max-height: 500px;
+        overflow: hidden;
+
+        >li {
+            border-bottom: 1px dashed #ddd;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            padding: 6px 0;
+            margin: 0 !important;
+
+            >.chapter {
+                padding: 0;
+
+                >a {
+                    color: black;
+                }
+            }
+        }
+    }
+
+    >.active{
+        max-height: 100% !important;
+    }
+}

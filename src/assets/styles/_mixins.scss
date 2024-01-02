@@ -1,0 +1,26 @@
+@mixin atLgScreen {
+    @media only screen and (min-width: 1200px) {
+        @content;
+    }
+}
+
+// 992
+@mixin atScreen992 {
+    @media only screen and (min-width: 992px) and (max-width:1199px) {
+        @content;
+    }
+}
+
+//768
+@mixin atScreen768 {
+    @media only screen and (min-width: 768px) and (max-width:991px) {
+        @content;
+    }
+}
+
+//576
+@mixin atScreen576 {
+    @media only screen and (min-width: 576px) and (max-width:767px) {
+        @content;
+    }
+}
